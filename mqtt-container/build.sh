@@ -16,6 +16,8 @@ rm -rf $PWD/data
 mkdir -p $PWD/data/conf/conf.d
 mkdir -p $PWD/data/log
 mkdir -p $PWD/data/data
+# If you mount the volumes locally,
+# make sure you copy the config in first
 cp -v mosquitto.conf $PWD/data/conf
 cp -v default.conf $PWD/data/conf/conf.d
 
