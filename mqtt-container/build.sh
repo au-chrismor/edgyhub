@@ -3,12 +3,12 @@
 echo "Building"
 #
 # Clean up all the bits & pieces.  You don't necessarily want to do this
-docker rm edgy-container
-docker rmi edgy-container:latest
+docker rm mqtt-container
+docker rmi mqtt-container:latest
 docker builder prune -f
 docker volume prune -f
 #
-docker build -t edgy-container .
+docker build -t mqtt-container .
 #
 echo "Running"
 #
@@ -25,5 +25,5 @@ docker run -it \
     -p 1883:1883/tcp \
     -p 8883:8883/tcp \
     -v "$PWD/data/conf:/mosquitto/conf" \
-    --name edgy-container \
-    edgy-container:latest
+    --name mqtt-container \
+    mqtt-container:latest
