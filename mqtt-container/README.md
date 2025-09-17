@@ -1,7 +1,7 @@
-# edgy-container
+# mqtt-container
 
 ## Introduction
-This is the core services container for the Edgy Hub project.
+This is part of the core services for the Edgy Hub project.
 
 ## Implementation
 The settings included are basic, but they get the system going.  You can update "mosquitto.conf" in this directory with any parameters you wish to override from a default installation.
