@@ -19,4 +19,8 @@ COPY mosquitto.conf /etc/mosquitto/conf.d/default.conf
 RUN /usr/bin/mosquitto_passwd -U /etc/mosquitto/passwd
 RUN chown mosquitto:mosquitto /etc/mosquitto/passwd
 
+VOLUME /etc/mosquitto
+VOLUME /var/log/mosquitto
+VOLUME /var/lib/mosquitto
+
 ENTRYPOINT [ "/usr/sbin/mosquitto", "-c", "/etc/mosquitto/mosquitto.conf" ]
