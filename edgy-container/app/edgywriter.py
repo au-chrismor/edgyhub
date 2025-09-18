@@ -4,7 +4,8 @@ import paho.mqtt.client as mqtt
 # Callback for CONNACK response
 def on_connect(client, userdata, flags, reason_code, properties):
     print(f"Connected with result code={reason_code}")
-    client.subscribe("$SYS/#")
+#    client.subscribe("$SYS/#")
+    client.subscribe("EDGY/#")
 
 
 # Callback for PUBLISH received
